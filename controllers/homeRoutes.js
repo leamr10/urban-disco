@@ -53,10 +53,8 @@ router.get('/post/:id', async (req, res) => {
     }
 });
 
-// Use withAuth middleware to prevent access to route
 router.get('/dashboard', withAuth, async (req, res) => {
     try {
-        // Find the logged in user based on the session ID
       const userData = await Post.findAll({
         where : {
             user_id: req.session.user_id
