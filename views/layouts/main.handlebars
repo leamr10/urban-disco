@@ -4,29 +4,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tech Blog</title>
+  <title>Posts and Comments Galore</title>
   <link rel="stylesheet" href="/css/jass.css">
   <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
   <div class="flex-column justify-space-between">
-    <header class="display-flex justify-space-between align-center p-2">
+    <header class="display-flex justify-space-between align-left p-2">
       <h1>
-        <a href="/">Tech Blog</a>
+        <a href="/">Posts and Comments Galore</a>
       </h1>
       <nav>
-        <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
-        <a href="/dashboard">dashboard</a> |
-        <button class="no-button" id="logout">logout</button>
+        <a href="/dashboard">Dashboard</a> |
+        <button class="no-button" id="logout">Logout</button>
         {{else}}
-        <a href="/login">login</a>
+        <a href="/login">Login</a>
         {{/if}}
       </nav>
     </header>
     <main class="container container-fluid mt-6">
-      <!-- Render the sub layout -->
       {{{ body }}}
     </main>
     <footer>
@@ -34,7 +32,6 @@
     </footer>
   </div>
 
-  <!-- Render script for logged in users only -->
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}

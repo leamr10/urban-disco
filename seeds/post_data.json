@@ -3,31 +3,31 @@
   {
     "title": "Example Post #1",
     "content": "It's Halloween in 2021! Ready for the Jets to beat the Bengals!",
-    "date_created": "2021-10-31T07:37:44.658Z",
+    "date_created": "10-31-21",
     "user_id": 1
   },
   {
     "title": "Example Post #2",
     "content": "It is a great day to start taking up running as a hobby.",
-    "date_created": "2022-02-09T11:50:40.206Z",
+    "date_created": "2-9-22",
     "user_id": 2
   },
   {
     "title": "Example Post #3",
     "content": "This is my first post so be nice to me!",
-    "date_created": "2022-04-11T06:23:42.294Z",
+    "date_created": "4-11-22",
     "user_id": 3
   },
   {
     "title": "Example Post #4",
     "content": "Taking up running was a great idea!",
-    "date_created": "2022-05-27T04:38:52.394Z",
+    "date_created": "5-27-22",
     "user_id": 2
   },
   {
     "title": "Example Post #5",
     "content": "Haven't posted since Halloween because I forgot my password!",
-    "date_created": "2022-08-12T02:25:17.340Z",
+    "date_created": "8-12-22",
     "user_id": 1
   }
 ]

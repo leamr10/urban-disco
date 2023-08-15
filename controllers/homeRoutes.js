@@ -14,12 +14,11 @@ router.get('/', async (req, res) => {
             ],
         });
 
-        if (!userPosts) {
+        if (!userPosts.length) {
             return res.status(404).json("No posts from selected user")
         }
 
-        const posts = userPosts.map((post) => 
-        post.get({ plain: true }));
+        const posts = userPosts.map((post) => post.get({ plain: true }));
 
         res.render('homepage', {
             posts,
@@ -41,7 +40,7 @@ router.get('/post/:id', async (req, res) => {
                 },
                 {
                     model: Comment,
-                    include: [User],
+                    include: ['user'],
                 }
             ],
         });
@@ -49,7 +48,7 @@ router.get('/post/:id', async (req, res) => {
         const post = postData.get({ plain: true });
 
         res.render('post', {
-            post,
+            ...post,
             logged_in: req.session.logged_in
         });
     } catch (err) {

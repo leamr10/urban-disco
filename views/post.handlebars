@@ -1,6 +1,21 @@
-<div class="flex-column-space between">
+<div class="flex-row-justify-center">
   <h2>{{name}}</h2>
   <p>{{content}}</p>
-  <p>Created by {{user.name}} on {{format_date date_created}}</p>
+  <p>Created by {{user.name}} on {{date_created}}</p>
   </p>
 </div>
+
+{{#each post.comments as |comment|}}
+        {{>comment}}
+    {{/each}}
+
+
+{{#if logged_in}}
+<form id="comment-form">
+  <div class="form-group">
+    <label for="form-text-area-1" class="form-text-area-1-label">Speak your mind!</label>
+    <textarea class="form-control" id="FormControlTextarea1" rows="1"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit comment</button>
+</form>
+{{/if}}
